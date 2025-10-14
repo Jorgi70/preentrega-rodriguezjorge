@@ -1,5 +1,6 @@
 from selenium import webdriver
-import time
+from selenium.webdriver.common.by import By
+
 # importamos modulo de selenium para los selectores
 from selenium.webdriver.common.by import By
 def test_nav():
@@ -11,10 +12,20 @@ def test_nav():
     try:
         # Ingresamos a la Pagina
         driver.get("https://www.saucedemo.com/")
-        #  Validamos el Titulo de la misma
-        titulo = driver.find_element(By.CLASS_NAME,"login_logo")
+        # indicamos el usuario para login
+        driver.find_element(By.ID,"user-name").send_keys("standard_user")
+        # indicamos el pass para el login
+        driver.find_element(By.ID,"password").send_keys("secret_sauce")
+        # hacemos click en el boton
+        driver.find_element(By.ID,"login-button").click()
+
+        assert "/inventory.html" in driver.current_url, "No se redirigio correctamente al inventario"
+        
+        #  Aca agarramos el titulo con una clase dentro de inventory.html
+        titulo = driver.find_element(By.CLASS_NAME,"app_logo")
+        
         # Aca validamos el titulo
-        assert titulo.text == "Swag Labs", f"Texto Esperado: 'Swag Labs', pero se encontro {titulo.text}"
+        assert titulo.text == "Swag Labs",f"Titulo incorrecto: {titulo.text}"
 
         print("Titulo Validado con EXITO")
 
