@@ -5,11 +5,12 @@ import time
 
 def test_login():
     driver = webdriver.Chrome()
+    # Se agrega el implicity para validar todas las busquedas
+    driver.implicitly_wait(7)
 
     try:
         driver.get("https://www.saucedemo.com/")
 
-        time.sleep(5)
 
         # indicamos el usuario para login
         driver.find_element(By.ID,"user-name").send_keys("standard_user")
@@ -17,8 +18,6 @@ def test_login():
         driver.find_element(By.ID,"password").send_keys("secret_sauce")
         # hacemos click en el boton
         driver.find_element(By.ID,"login-button").click()
-
-        time.sleep(5)
 
         assert "/inventory.html" in driver.current_url, "No se redirigio correctamente al inventario"
 
