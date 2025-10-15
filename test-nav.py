@@ -1,8 +1,8 @@
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-
 # importamos modulo de selenium para los selectores
 from selenium.webdriver.common.by import By
+
+
 def test_nav():
     #inicializamos el navegador Chrome
     driver = webdriver.Chrome()
