@@ -5,6 +5,7 @@ from utils import login
 @pytest.fixture
 def driver():
     driver = webdriver.Chrome()
+    driver.implicitly_wait(7)
     yield driver
     driver.quit()
     
