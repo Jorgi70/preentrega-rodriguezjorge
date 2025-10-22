@@ -18,7 +18,7 @@ def test_nav():
         driver.find_element(By.ID,"password").send_keys("secret_sauce")
         # hacemos click en el boton
         driver.find_element(By.ID,"login-button").click()
-
+        # Validamos que redirecciones a /inventory.html
         assert "/inventory.html" in driver.current_url, "No se redirigio correctamente al inventario"
         
         #  Aca agarramos el titulo con una clase dentro de inventory.html
