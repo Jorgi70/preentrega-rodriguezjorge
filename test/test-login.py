@@ -1,32 +1,17 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium import webdriver
+import pytest
 import time
 
 
-def test_login():
-    driver = webdriver.Chrome()
-    # Se agrega el implicity para validar todas las busquedas
-    driver.implicitly_wait(7)
-
+def test_login_validation(login_in_driver):
     try:
-        driver.get("https://www.saucedemo.com/")
+        driver = login_in_driver
 
-
-        # indicamos el usuario para login
-        driver.find_element(By.ID,"user-name").send_keys("standard_user")
-        # indicamos el pass para el login
-        driver.find_element(By.ID,"password").send_keys("secret_sauce")
-        # hacemos click en el boton
-        driver.find_element(By.ID,"login-button").click()
-
-        assert "/inventory.html" in driver.current_url, "No se redirigio correctamente al inventario"
-
-        print("Login exitoso y validado correctamente.")
-
-
+        assert "/inventory.html" in driver.current_url,"No se Redirigio al inventario"
+        
     except Exception as e:
-        print(f"Error en test_login: {e}")
+        print(f"Error en testa_login: {e}")
         raise
     finally:
-        driver.quit()     
-
+        driver.quit()    
