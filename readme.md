@@ -46,3 +46,21 @@ preentrega-rodriguezjorge/
 ├── run_tests.py            # Archivo main para la ejecución de los tests. 
 └── requirements.txt        # Listado de dependencias del proyecto.
 ```
+
+⚙️ Configuración e Instalación
+
+1. Clonar el Repositorio
+
+git clone https://github.com/Jorgi70/preentrega-rodriguezjorge.git
+cd preentrega-rodriguezjorge
+
+2. Instalar Dependencias
+
+Asegúrate de tener Python instalado. Luego, instala las bibliotecas necesarias:
+
+pip install selenium
+pip install pytest
+pip install webdriver-manager
+pip install pytest-html
+
+(Alternativamente, puedes usar pip install -r requirements.txt si se genera el archivo.)
