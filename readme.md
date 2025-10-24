@@ -27,3 +27,9 @@ Se han cubierto los siguientes escenarios de usuario:
 | **WebDriver Manager** | Gestión automática de los *drivers* del navegador (ej. ChromeDriver). |
 | **Pytest-HTML** | Generación de reportes detallados en formato HTML. |
 | **Git & GitHub** | Sistema de control de versiones y hosting del código fuente. |
+
+## 📁 Estructura del Repositorio
+
+La organización del proyecto se adhiere a una estructura modular para facilitar la escalabilidad y el mantenimiento:
+
+preentrega-rodriguezjorge / ├── tests/ │ ├── test_login.py # Pruebas relacionadas con el Login. │ └── test_inventory.py # Pruebas de Inventario y Carrito.  │ └── test_productos.py # Pruebas de Productos y funcionalidades ├── utilidades/ │ └── utils.py # Funciones auxiliares y configuración del driver. ├── conftest.py # Hooks de Pytest, fixtures (ej. inicialización de driver). ├── reportes/ │ └── report.html # Reporte final generado por pytest. ├── README.md # Este archivo.
