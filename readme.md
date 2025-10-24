@@ -39,7 +39,7 @@ preentrega-rodriguezjorge/
 │     ├── test_inventory.py     # Pruebas de Inventario y Elementos. 
 │     └── test_productos.py     # Pruebas de Carrito y Flujo de Productos.
 │ 
-├── utils.py                # Funciones auxiliares (ej. Inicialización de Chrome/Driver). 
+├── utils.py                # Funciones Login (Inicialización de Chrome/Driver). 
 ├── conftest.py             # Hooks de Pytest, fixtures. 
 ├── report.html             # Reporte final generado por pytest. 
 ├── README.md               # Describe las funcionalidades del programa. 
