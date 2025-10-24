@@ -44,4 +44,5 @@ preentrega-rodriguezjorge/
 ├── report.html             # Reporte final generado por pytest. 
 ├── README.md               # Describe las funcionalidades del programa. 
 ├── run_tests.py            # Archivo main para la ejecución de los tests. 
-└── requirements.txt        # Listado de dependencias del proyecto.```
+└── requirements.txt        # Listado de dependencias del proyecto.
+```
