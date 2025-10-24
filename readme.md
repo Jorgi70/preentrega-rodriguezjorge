@@ -32,14 +32,16 @@ Se han cubierto los siguientes escenarios de usuario:
 
 La organización del proyecto se adhiere a una estructura modular para facilitar la escalabilidad y el mantenimiento:
 
-preentrega-rodriguezjorge/ 
-├── test/
-│   ├── test_login.py          # Pruebas relacionadas con el Login.
-│   └── test_inventory.py      # Pruebas de Inventario y Carrito.
-|   └── test_productos.py      # Pruebas de Carrito y Productos en el mismo.
-├── utils.py                   # Funciones Login Chrome.
-├── conftest.py                # Hooks de Pytest, fixtures.
-├── report.html                # Reporte final generado por pytest.
-├── README.md                  # Describe las funcionalidades del programa.
-├── run_tests.py               # Archivo main donde se ejecutas los test.
-└── requirements.txt           # Listado de dependencias del proyecto.
+preentrega-rodriguezjorge/
+|
+|-- tests/
+|   |-- test_login.py         # Pruebas relacionadas con el Login.
+|   |-- test_inventory.py     # Pruebas de Inventario y Elementos.
+|   '-- test_productos.py     # Pruebas de Carrito y Flujo de Productos.
+|
+|-- utils.py                  # Funciones auxiliares (ej. Inicialización de Chrome/Driver).
+|-- conftest.py               # Hooks de Pytest, fixtures (ej. inicialización de driver).
+|-- report.html               # Reporte final generado por pytest.
+|-- README.md                 # Describe las funcionalidades del programa.
+|-- run_tests.py              # Archivo main para la ejecución de los tests.
+'-- requirements.txt          # Listado de dependencias del proyecto.
