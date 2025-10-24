@@ -67,4 +67,4 @@ pip install webdriver-manager
 pip install pytest-html
 
 ```
-(Alternativamente, puedes usar pip install -r requirements.txt si se genera el archivo.)
+(Alternativamente, puedes usar ***pip install -r requirements.txt*** si se genera el archivo.)
