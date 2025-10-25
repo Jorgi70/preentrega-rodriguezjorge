@@ -68,3 +68,17 @@ pip install pytest-html
 
 ```
 (Alternativamente, puedes usar ***pip install -r requirements.txt*** si se genera el archivo.)
+
+📊 **Reporte de Resultados**
+
+Tras la ejecución, el reporte report.html contendrá un resumen ejecutivo de la corrida de pruebas, incluyendo:
+
+Detalle de los casos de prueba ejecutados.
+
+Resultado de cada prueba (Éxito passed o Falla failed).
+
+Duración de la ejecución.
+
+🎯 **Proyección y Mejoras** (Próximos Pasos)
+
+El proyecto está diseñado para ser la base de la entrega final. Las futuras mejoras planeadas
